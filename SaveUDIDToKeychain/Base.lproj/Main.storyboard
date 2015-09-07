@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UDID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YcK-Vm-7hP">
+                                <rect key="frame" x="180" y="123" width="198" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="WOx-44-juX"/>
+                                    <constraint firstAttribute="height" constant="40" id="sqb-LJ-MwS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WOx-44-juX"/>
+                                        <exclude reference="sqb-LJ-MwS"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="WOx-44-juX"/>
+                                        <include reference="sqb-LJ-MwS"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Zg-46-SfD">
+                                <rect key="frame" x="251" y="226" width="157" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Lbr-sh-yga"/>
+                                    <constraint firstAttribute="width" constant="160" id="Z9I-gX-gz7"/>
+                                </constraints>
+                                <state key="normal" title="保存到钥匙串">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lbr-sh-yga"/>
+                                        <exclude reference="Z9I-gX-gz7"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Lbr-sh-yga"/>
+                                        <include reference="Z9I-gX-gz7"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="saveUDIDAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QLY-Ph-cCb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="7Zg-46-SfD" secondAttribute="centerX" id="2as-cr-Urn"/>
+                            <constraint firstItem="YcK-Vm-7hP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="60" id="A8h-AG-LgR"/>
+                            <constraint firstAttribute="centerX" secondItem="YcK-Vm-7hP" secondAttribute="centerX" id="Ki6-iP-Mbn"/>
+                            <constraint firstItem="7Zg-46-SfD" firstAttribute="top" secondItem="YcK-Vm-7hP" secondAttribute="bottom" constant="41" id="f2H-eF-NI1">
+                                <variation key="heightClass=regular-widthClass=compact" constant="44"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="A8h-AG-LgR"/>
+                                <exclude reference="Ki6-iP-Mbn"/>
+                                <exclude reference="2as-cr-Urn"/>
+                                <exclude reference="f2H-eF-NI1"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="A8h-AG-LgR"/>
+                                <include reference="Ki6-iP-Mbn"/>
+                                <include reference="2as-cr-Urn"/>
+                                <include reference="f2H-eF-NI1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="YcK-Vm-7hP" id="XdT-0L-9r5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="325.5" y="384"/>
+        </scene>
+    </scenes>
+</document>
